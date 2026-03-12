@@ -1,35 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bypass School Blocker</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Access Portal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Inter", sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+color:white;
+}
+
+.container{
+width:420px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter: blur(18px);
+border-radius:16px;
+padding:35px;
+text-align:center;
+box-shadow:0 10px 35px rgba(0,0,0,0.4);
+animation:fadeIn 0.7s ease;
+}
+
+h1{
+font-size:22px;
+font-weight:600;
+margin-bottom:15px;
+}
+
+.warning{
+font-size:14px;
+color:#cbd5f5;
+margin-bottom:30px;
+line-height:1.6;
+}
+
+.buttons{
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+button{
+border:none;
+padding:14px;
+border-radius:10px;
+font-size:15px;
+font-weight:500;
+cursor:pointer;
+transition:all .25s ease;
+}
+
+button:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 20px rgba(0,0,0,0.4);
+}
+
+.ymal{
+background:#6366f1;
+color:white;
+}
+
+.google{
+background:#ffffff;
+color:#111;
+}
+
+.spotify{
+background:#1DB954;
+color:white;
+}
+
+footer{
+margin-top:25px;
+font-size:12px;
+color:#94a3b8;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(15px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
 </head>
+
 <body>
-  <header class="navbar">
-    <h1>Bypass School Blocker</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="how-to-use.html">Guide</a>
-      <a href="video.html">Video</a>
-    </nav>
-  </header>
 
-  <main class="hero">
-    <h2>Learning How to bypass blockers</h2>
-    <p>
-      This project is designed for educational purposes, focusing on
-      web technologies, browser behavior, and digital security concepts.
-    </p>
-    <a class="button" href="how-to-use.html">Read the Guide</a>
-    <p1>search.ymal.space<p1>
-    <p2>https://google.com</p2>
-    <p3>https://spotify.com</p3>
-  </main>
+<div class="container">
 
-  <footer>
-    <p>© 2026 How to bypass school blocker</p>
-  </footer>
+<h1>Secure Access Portal</h1>
+
+<div class="warning">
+This tool may attempt to open websites that could be restricted or blocked on your network.  
+Use responsibly and ensure you follow your organization or school policies.
+</div>
+
+<div class="buttons">
+
+<button class="ymal" onclick="openSite('https://search.ymal.space')">
+Open Ymal Search
+</button>
+
+<button class="google" onclick="openSite('https://www.google.com')">
+Open Google
+</button>
+
+<button class="spotify" onclick="openSite('https://www.spotify.com')">
+Open Spotify
+</button>
+
+</div>
+
+<footer>
+Modern Access Interface
+</footer>
+
+</div>
+
+<script>
+
+function openSite(url){
+window.open(url, "_blank");
+}
+
+</script>
+
 </body>
 </html>
